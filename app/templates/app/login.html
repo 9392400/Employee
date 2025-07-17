@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            text-decoration:none;
+            
+        }
+        a:hover{
+            color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <form method='post'>
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">login</button>
+    </form>
+    <div>
+        <p>Do you want register please click here?  <a href="{% url 'gopi' %}">Register</a></p>
+    </div>
+</body>
+</html>
